@@ -1,10 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './style/custom.scss';
+// import "bootstrap/dist/css/bootstrap.min.css";
+import PlannerPage from './PlannerPage';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// if (!global._babelPolyfill) {
+//  require('babel-polyfill');
+// }
+ReactDOM.render(<PlannerPage />, document.getElementById("root"));
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

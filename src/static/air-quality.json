@@ -1,0 +1,30 @@
+[
+ {
+ "aqi": [0,50],
+ "level": "good",
+ "risk": "low",
+ "Explanation": "Air quality is satisfacoty and air pollution poses little or no risk",
+ "Suggestion": "People with lung diseases, such as asthma, chronic bronchitis, and emphysema, can be particularly sensitive to air polution. They will generally experience more serious health effects"
+ },
+{
+ "aqi": [51,100],
+ "level": "moderate",
+ "risk": "moderate",
+ "Explanation": "Air quality is acceptable; however for some pollutants that may be a moderate health concern for people have sensitve to air pollution",
+ "Suggestion": "People with lung diseases, such as asthma, chronic bronchitis, and emphysema, can be particularly sensitive to air polution. They will generally experience more serious health effects"
+ },
+{
+ "aqi": [101,150],
+ "level": "Unhealthy for sensitive group",
+ "risk": "moderate",
+ "Explanation": "Air quality is acceptable; however for some pollutants that may be a moderate health concern for people have sensitve to air pollution",
+ "Suggestion": "People with lung diseases, such as asthma, chronic bronchitis, and emphysema, can be particularly sensitive to air polution. They will generally experience more serious health effects"
+ },
+ {
+ "aqi": [151,200],
+ "level": "Unhealthy",
+ "risk": "high",
+ "Explanation": "Everyone may begin to experience health effects",
+ "Suggestion": "The following groups should avoid prolonged or heavy outdoor activity: people with lung disease, such as asthma, children and older adults and people who are active outdoors. Everyone else should limit prolonged outdoor activity."
+ }
+]
