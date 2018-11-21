@@ -17,6 +17,7 @@
     "react-autosuggest": "^9.4.2",
     "react-dom": "^16.6.0",
     "react-fontawesome": "^1.6.1",
+    "react-google-maps": "^9.4.5",
     "react-icons": "^3.2.2",
     "react-liquid-gauge": "^1.2.4",
     "react-motion": "^0.5.2",

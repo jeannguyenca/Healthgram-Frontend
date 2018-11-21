@@ -7,17 +7,15 @@ import Suggestions from "../components/Suggestions";
 
 import prepare_allergy from "../img/prepare_allergy@1x.svg";
 
-
 // import SimplePieChart from "./SimplePieChart";
 let suggestions = require("../static/air-quality.json");
-
 
 class AirQuality extends React.Component {
   constructor() {
     super();
     this.state = {
       loaded: false,
-      info: { info: {}},
+      info: { info: {} },
       risk: ""
     };
     this.getAirQuality = this.getAirQuality.bind(this);
@@ -75,9 +73,12 @@ class AirQuality extends React.Component {
       });
   };
 
-  getSuggestions(){
+  getSuggestions() {
     for (var i = 0; i < suggestions.length; i++) {
-      if (this.state.aqius > suggestions[i].aqi[0] && this.state.aqius < suggestions[i].aqi[1]){
+      if (
+        this.state.aqius > suggestions[i].aqi[0] &&
+        this.state.aqius < suggestions[i].aqi[1]
+      ) {
         this.setState({
           info: {
             info: {
@@ -87,43 +88,59 @@ class AirQuality extends React.Component {
           }
         });
         // return null;
-      };  
+      }
     }
   }
 
   getRisk() {
     for (let i = 0; i < suggestions.length; i++) {
-      if (this.state.aqius > suggestions[i].aqi[0] && this.state.aqius < suggestions[i].aqi[1]) {
-        this.setState({risk: suggestions[i].risk.charAt(0).toUpperCase() + suggestions[i].risk.slice(1) + " risk"});
+      if (
+        this.state.aqius > suggestions[i].aqi[0] &&
+        this.state.aqius < suggestions[i].aqi[1]
+      ) {
+        this.setState({
+          risk:
+            suggestions[i].risk.charAt(0).toUpperCase() +
+            suggestions[i].risk.slice(1) +
+            " risk"
+        });
       }
     }
   }
 
   render() {
-
-   return <React.Fragment>
-       <Col xs="12">
-         <h1>Air Quality and Weather Forecast</h1>
-       </Col>
-       <Col sm="12" lg={{ size: 4, offset: 1 }} className="airQualityContainer">
-          {this.state.loaded && <React.Fragment>
-            <AirQualityPieChart aqius={this.state.aqius} />
-            <div className="aqinfo">
-              <strong>{this.state.aqius}</strong>
-              <span>{this.state.risk}</span>
-            </div>
-           </React.Fragment>}
-       </Col>
-    {/* <Col sm="12" md="6" className="weatherContainer"> */}
-       <Weather show={true} country={this.props.country} />
-    {/* </Col> */}
-       <Suggestions 
-          info={this.state.info} 
+    return (
+      <React.Fragment>
+        <Col xs="12">
+          <h1>Air Quality and Weather Forecast</h1>
+        </Col>
+        <Col
+          sm="12"
+          lg={{ size: 4, offset: 1 }}
+          className="airQualityContainer"
+        >
+          {this.state.loaded && (
+            <React.Fragment>
+              <h4>Air Quality</h4>
+              <AirQualityPieChart aqi={this.state.aqi} max={200} />
+              <div className="aqinfo">
+                <strong>{this.state.aqius}</strong>
+                <span>{this.state.risk}</span>
+              </div>
+            </React.Fragment>
+          )}
+        </Col>
+        {/* <Col sm="12" md="6" className="weatherContainer"> */}
+        <Weather show={true} country={this.props.country} />
+        {/* </Col> */}
+        <Suggestions
+          info={this.state.info}
           img={prepare_allergy}
-          alt={"Prepare for allergy"}/>
-       {/* {this.getSuggestions()} */}
-
-     </React.Fragment>;
+          alt={"Prepare for allergy"}
+        />
+        {/* {this.getSuggestions()} */}
+      </React.Fragment>
+    );
   }
 }
 

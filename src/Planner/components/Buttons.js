@@ -1,9 +1,9 @@
 import React from "react";
-import {Button} from "reactstrap";
+import { Button } from "reactstrap";
 
 const randomColor = ["primary", "warning", "info", "secondary", "success"];
-const Buttons = (props) => {
- const { diseases, buttonHandle, selectedOption } = props;
+const Buttons = props => {
+  const { diseases, buttonHandle, selectedOption } = props;
   // const diseaseNames = Object.keys(diseases);
 
   const buttonCollections = Object.keys(diseases).map((disease, index) =>
@@ -26,15 +26,11 @@ const Buttons = (props) => {
           buttonHandle(disease);
         }}
       >
-          {diseases[disease]["name"]}
+        {diseases[disease]["name"]}
       </Button>
     )
   );
- return (
-  <div>
-   {buttonCollections}
-  </div>
- );
+  return <div>{buttonCollections}</div>;
 };
 
 export default Buttons;

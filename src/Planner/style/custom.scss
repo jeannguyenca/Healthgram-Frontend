@@ -1,84 +1,87 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900');
-$font-family: 'Montserrat', sans-serif !important;
-$primary: #0079FF;
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,900");
+$font-family: "Montserrat", sans-serif !important;
+$primary: #0079ff;
 
 $theme-colors: (
   "primary": $primary,
   "secondary": #2b30c9,
   "success": #89e8b0,
-  "info": #FFC371,
-  "warning": #FF5E62
+  "info": #ffc371,
+  "warning": #ff5e62
 );
 
-body{
+body {
   font-family: $font-family;
 }
-button{
+button {
   margin: 5px;
   border-radius: 50px !important;
   padding: 0 20px !important;
 }
 
-.container-fluid{
+.container-fluid {
   padding: 0;
 }
-.row:not(.mapContainer){
+.planner{
+  min-height: 100vh;
+}
+.row:not(.mapContainer) {
   margin-top: 30px;
-  margin-bottom: 30px;    
+  margin-bottom: 30px;
   padding: 20px 0;
 }
 
-h1,h2{
+h1,
+h2 {
   font-weight: 900 !important;
 }
 
-.chartContainter h1, .airContainter h1{
+.chartContainter h1,
+.airContainter h1 {
   text-align: center;
 }
 
-
-.plannerLanding{
-
-  .landing{
+.plannerLanding {
+  .landing {
     height: 100vh;
     padding: 0;
     margin: 0;
-    h1{
+    h1 {
       text-align: left;
     }
-    img{
+    img {
       width: 100%;
     }
-    div{
+    div {
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
-    button{
+    button {
       margin-right: 10px;
     }
   }
 }
-.mapContainer{
+.mapContainer {
   display: flex;
   height: 300px;
   align-items: center;
   justify-content: center;
-  form{
+  form {
     position: absolute;
     z-index: 999;
 
     margin-top: -40px;
-    strong{
+    strong {
       color: white;
       text-align: center;
       width: 100%;
       display: block;
       text-align: center;
     }
-    input{
+    input {
       background: none;
-      color:white;
+      color: white;
       border: 1px solid white;
       border-radius: 20px;
       display: block;
@@ -86,162 +89,178 @@ h1,h2{
       width: 200px;
       text-align: center;
     }
-    button{
+    button {
       display: block;
       margin: 5px auto;
     }
   }
   #map {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
+  }
 }
-
-}
-.chartContainter{
-  .chartDisplay{
+.chartContainter {
+  .chartDisplay {
     height: 300px;
     margin-bottom: 30px;
     margin-top: 50px;
   }
-  form div{
+  form div {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
   }
-  strong{
+  strong {
     text-align: center;
     display: block;
   }
-  button{
+  button {
     margin: auto 5px;
   }
-  .recharts-surface{
+  .recharts-surface {
     overflow: visible;
   }
-  .recharts-tooltip-label{
+  .recharts-tooltip-label {
     display: none;
   }
-  .recharts-default-tooltip{
+  .recharts-default-tooltip {
     border-radius: 20px;
     padding: 0 20px !important;
     border: none !important;
-    background-color: $primary !important
+    background-color: $primary !important;
   }
-  .recharts-tooltip-item-list li{
+  .recharts-tooltip-item-list li {
     color: white !important;
   }
 }
-.airContainter{
-  div:first-of-type{
+.airContainter {
+  div:first-of-type {
     margin-bottom: 30px;
   }
-  .airQualityContainer{
+  .airQualityContainer {
     height: 200px;
     width: 100%;
 
-    .recharts-responsive-container{
+    .recharts-responsive-container {
       position: relative;
     }
-    .aqinfo{
-      width: calc( 100% - 30px );
+    .aqinfo {
+      width: calc(100% - 30px);
       text-align: center;
       position: absolute;
       bottom: 25px;
 
-      span{
+      span {
         display: block;
         font-size: 20px;
         line-height: 0px;
       }
-      strong{
+      strong {
         font-size: 60px;
       }
     }
   }
-  .weatherContainer{
+  .weatherContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
 
     margin-top: 20px;
 
-    h4{
+    h4 {
       margin-bottom: 10px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
     }
-    .text{
+
+    .text {
       font-family: $font-family;
     }
-    .value{
+    .value {
       font-weight: 700;
     }
   }
 }
 
-.suggestion{
-  -webkit-box-shadow: 0px 3px 4px 3px rgba(219,219,219,0.5);
-  -moz-box-shadow: 0px 3px 4px 3px rgba(219,219,219,0.5);
-  box-shadow: 0px 3px 4px 3px rgba(219,219,219,0.5);
+.suggestion {
+  -webkit-box-shadow: 0px 3px 4px 3px rgba(219, 219, 219, 0.5);
+  -moz-box-shadow: 0px 3px 4px 3px rgba(219, 219, 219, 0.5);
+  box-shadow: 0px 3px 4px 3px rgba(219, 219, 219, 0.5);
   margin-bottom: 20px;
-  padding: 50px 30px !important;
+  padding: 50px 50px !important;
   transition: all 1s;
 
   display: grid;
   grid-column-gap: 2%;
   grid-template-columns: 28% 70%;
 
-  @media only screen and (max-width : 768px) {
+  @media only screen and (max-width: 768px) {
     grid-template-columns: 100%;
   }
 
-  h1{
-    text-align: left
+  h1 {
+    text-align: left;
   }
 
-  .left{
+  .left {
     display: grid;
   }
-  img{
+  img {
     width: 70%;
     align-self: end;
     justify-self: center;
   }
-  strong{
+  strong {
     margin-bottom: 15px;
     margin-top: 10px;
     display: block;
   }
-  .right{
-    div{
+  .right {
+    div {
       padding-bottom: 10px;
     }
     ul {
-    list-style: none;
-    padding: 0 0 0 0px;
+      list-style: none;
+      padding: 0 0 0 0px;
     }
     li:before {
-        content: "• ";
-        padding-right: 5px;
-        font-size: 30px;
-        line-height: 15px;
-        color: $primary;
+      content: "• ";
+      padding-right: 5px;
+      font-size: 30px;
+      line-height: 15px;
+      color: $primary;
     }
   }
 }
 
-.clinicListContainer{
-  h1{
+.clinicListContainer {
+  h1 {
     text-align: left;
   }
-  button{
-    svg{
+  button {
+    svg {
       margin-left: 5px;
       margin-bottom: 2px;
     }
   }
 }
 
+// hide google map control
+a[href^="http://maps.google.com/maps"]{display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+    display:none;
+}
+.gmnoprint div {
+    display: none;
+}
+.gm-control-active{
+  display: none;
+}
 
 // Override default variables before the import
 
 // Import Bootstrap and its default variables
-@import '~bootstrap/scss/bootstrap.scss';
+@import "~bootstrap/scss/bootstrap.scss";
