@@ -8,3 +8,6 @@ Our app focuses on:
 * Recent allergies and diseases outbreaks in the specific countries
 * Suggestive vaccines to take for the immunization from the risked disease or allergy
 * A forum for the people to exchange the current situation on the disease or allergy outbreak
+
+## Screenshot
+![Screenshot](screenshot.png)
