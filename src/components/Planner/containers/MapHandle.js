@@ -5,6 +5,8 @@ import GoogleMaps from "../components/GoogleMaps";
 
 const mapStyle = require("../static/map.json");
 
+const key ="AIzaSyATfzcvYvcSBIJd_F2V1QHQ7UbinBuH19s"
+
 class MapHandle extends Component {
   state = {
     currentLatLng: {
@@ -40,7 +42,7 @@ class MapHandle extends Component {
   searchPlaces = place => {
     axios
       .get(
-        `${"https://cors-anywhere.herokuapp.com/"}https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${place}&inputtype=textquery&fields=geometry&key=AIzaSyAaW6aou2PiPHgD15WYQ32kWShG6V9dOcM`
+        `${"https://cors-anywhere.herokuapp.com/"}https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${place}&inputtype=textquery&fields=geometry&key=${key}`
       )
       .then(res => {
         // console.log('the response', res)
