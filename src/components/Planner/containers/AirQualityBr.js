@@ -10,7 +10,7 @@ import prepare_allergy from "../../../assets/prepare_disease@1x.svg"
 // import SimplePieChart from "./SimplePieChart";
 // let suggestions = require("../static/air-quality.json");
 
-const map_key = "AIzaSyATfzcvYvcSBIJd_F2V1QHQ7UbinBuH19s"
+const map_key = "AIzaSyBgKYGw3uYPC965zIaOiN_C8JGLIXFpfUU"
 const key = "5647920f0d5c47149141d822febe2f01"
 
 class AirQualityBr extends React.Component {

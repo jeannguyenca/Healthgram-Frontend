@@ -26,8 +26,7 @@ const key = "AIzaSyATfzcvYvcSBIJd_F2V1QHQ7UbinBuH19s"
 
 const maps = compose(
   withProps({
-    googleMapURL:
-      `https://maps.googleapis.com/maps/api/js?libraries=places&key=${key}`,
+    googleMapURL: `https://maps.googleapis.com/maps/api/js?libraries=places&key=${key}`,
     loadingElement: <div style={{ height: `100%` }} />,
     containerElement: <div style={{ height: `400px`, width: `100%` }} />,
     mapElement: <div style={{ height: `100%` }} />
