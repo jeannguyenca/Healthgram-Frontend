@@ -45,7 +45,7 @@ class MapHandle extends Component {
         `${"https://cors-anywhere.herokuapp.com/"}https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${place}&inputtype=textquery&fields=geometry&key=${key}`
       )
       .then(res => {
-        console.log("the response", res)
+        // console.log("the response", res)
         const newLngLat = res.data.candidates[0].geometry.location
         this.setState({
           currentLatLng: newLngLat,
