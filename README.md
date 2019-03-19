@@ -10,4 +10,5 @@ Our app focuses on:
 * A forum for the people to exchange the current situation on the disease or allergy outbreak
 
 ## Screenshot
+
 ![Screenshot](screenshot.png)
