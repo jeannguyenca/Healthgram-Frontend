@@ -10,6 +10,7 @@ import prepare_allergy from "../../../assets/prepare_disease@1x.svg"
 // import SimplePieChart from "./SimplePieChart";
 // let suggestions = require("../static/air-quality.json");
 
+const map_key = "AIzaSyATfzcvYvcSBIJd_F2V1QHQ7UbinBuH19s"
 const key = "5647920f0d5c47149141d822febe2f01"
 
 class AirQualityBr extends React.Component {
@@ -48,7 +49,7 @@ class AirQualityBr extends React.Component {
   getAirQuality = country => {
     axios
       .get(
-        `${"https://cors-anywhere.herokuapp.com/"}https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${country}&inputtype=textquery&fields=geometry&key=AIzaSyAaW6aou2PiPHgD15WYQ32kWShG6V9dOcM`
+        `${"https://cors-anywhere.herokuapp.com/"}https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${country}&inputtype=textquery&fields=geometry&key=${map_key}`
       )
       .then(response => {
         // console.log('the response', response);

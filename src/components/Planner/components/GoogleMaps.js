@@ -1,11 +1,11 @@
-import React from "react";
-import { compose, withProps } from "recompose";
+import React from "react"
+import { compose, withProps } from "recompose"
 import {
   withScriptjs,
   withGoogleMap,
   GoogleMap,
   Marker
-} from "react-google-maps";
+} from "react-google-maps"
 
 // var markerStyling = {
 //   clear: "both",
@@ -21,12 +21,13 @@ import {
 //   textAlign: "center"
 // };
 
-import marker from "../../../assets/marker.svg";
+import marker from "../../../assets/marker.svg"
+const key = "AIzaSyATfzcvYvcSBIJd_F2V1QHQ7UbinBuH19s"
 
 const maps = compose(
   withProps({
     googleMapURL:
-      "https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAw1zriz4pPpa2YVpyr9tAhomDohpi2FBg",
+      `https://maps.googleapis.com/maps/api/js?libraries=places&key=${key}`,
     loadingElement: <div style={{ height: `100%` }} />,
     containerElement: <div style={{ height: `400px`, width: `100%` }} />,
     mapElement: <div style={{ height: `100%` }} />
@@ -34,13 +35,13 @@ const maps = compose(
   withScriptjs,
   withGoogleMap
 )(props => {
-  let { latLng } = props;
-  let { lat, lng } = latLng;
+  let { latLng } = props
+  let { lat, lng } = latLng
 
   let markerPosition = {
     lat: lat - 1.8,
     lng: lng
-  };
+  }
 
   return (
     <GoogleMap
@@ -63,7 +64,7 @@ const maps = compose(
         />
       )}
     </GoogleMap>
-  );
-});
+  )
+})
 
-export default maps;
+export default maps
