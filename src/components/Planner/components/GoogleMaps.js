@@ -22,7 +22,7 @@ import {
 // };
 
 import marker from "../../../assets/marker.svg"
-const key = "AIzaSyATfzcvYvcSBIJd_F2V1QHQ7UbinBuH19s"
+const key = `${process.env.REACT_APP_MAP_KEY}`
 
 const maps = compose(
   withProps({

@@ -5,7 +5,7 @@ import GoogleMaps from "../components/GoogleMaps"
 
 const mapStyle = require("../static/map.json")
 
-const key = "AIzaSyBgKYGw3uYPC965zIaOiN_C8JGLIXFpfUU"
+const key = `${process.env.REACT_APP_PLACE_KEY}`
 
 class MapHandle extends Component {
   state = {
