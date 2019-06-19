@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { Container, Col, Row, Button } from "reactstrap";
 import ChartContainer from "./ChartContainer";
 import MapHandle from "./MapHandle";
-// import AirQuality from "./AirQuality";
-import AirQualityBr from "./AirQualityBr";
+import AirQuality from "./AirQuality";
+// import AirQualityBr from "./AirQualityBr";
 import Clinics from "../components/Clinics";
 import ScrollableAnchor, { goToAnchor } from "react-scrollable-anchor";
 // import { configureAnchors } from "react-scrollable-anchor";
@@ -72,14 +72,14 @@ class PlannerDisplay extends Component {
           <Row className="airContainter">
             {/* Air Quality */}
             {this.state.showData && (
-              // <AirQuality
-              //   show={this.state.showData}
-              //   country={this.state.value}
-              // />
-              <AirQualityBr
+              <AirQuality
                 show={this.state.showData}
                 country={this.state.value}
               />
+              // <AirQualityBr
+              //   show={this.state.showData}
+              //   country={this.state.value}
+              // />
             )}
             {/* Weather component */}
           </Row>
